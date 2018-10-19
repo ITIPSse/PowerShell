@@ -1,0 +1,17 @@
+# Useful PowerShell script to help rename multiple files with similar filenames.
+# Ex. AccountStatement_2018-10-19
+#     AccountStatement_2018-10-21
+#     AccountStatement_2018-10-22
+#
+# To 
+#
+# Ex. BankStatement_2018-10-19
+#     BankStatement_2018-10-21
+#     BankStatement_2018-10-22
+#
+# Original source: https://superuser.com/questions/645797/powershell-renaming-multiple-files-specific-part-of-file-name
+#
+# Instructions and usecases TO BE ADDED
+
+get-childItem '*.*' | rename-item -newname { $_.name -replace '(Account)','Bank' }
+
