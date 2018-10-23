@@ -1,0 +1,13 @@
+# Used to force UTF-8 Encoding for files in a folder. 
+# You can control what files this is performed for after the -Include statement.
+# ex. use *.* to force UTF-8 Encoding for all files in the folder or *.csv depending on your wanted filetype to convert.
+# You will be asked to provide your sourcepath upon running the script.
+
+Param (
+	    [Parameter(Mandatory=$True)][String]$SourcePath
+	    )	
+	
+	Get-ChildItem $SourcePath\*  -recurse -Include *.json,*.html,*.xml,*.js,*.txt,*.css | ForEach-Object {
+	$content = $_ | Get-Content
+	
+	Set-Content -PassThru $_.Fullname $content -Encoding UTF8 -Force}
