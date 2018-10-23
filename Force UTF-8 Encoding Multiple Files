@@ -4,8 +4,8 @@
 # You will be asked to provide your sourcepath upon running the script.
 
 Param (
-	    [Parameter(Mandatory=$True)][String]$SourcePath
-	    )	
+		[Parameter(Mandatory=$True)][String]$SourcePath
+	)	
 	
 	Get-ChildItem $SourcePath\*  -recurse -Include *.json,*.html,*.xml,*.js,*.txt,*.css | ForEach-Object {
 	$content = $_ | Get-Content
