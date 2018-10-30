@@ -1,0 +1,11 @@
+# Want to find all commands that shares the same -Parameter or similar -Parameters?
+# Run this command in either Powershell Console or Powershell ISE
+#
+# Instructions: Just replace the text   The full or partial name
+# With the whole command or part of the command name that you want
+# to find the name for.
+#
+# Example: Get-Command -Parameter *Filepath*
+# Returns a list of all the commands that has Filepath as a Parameter.
+
+Get-Command -Parameter *The full or partial name*
