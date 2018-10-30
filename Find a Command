@@ -1,0 +1,12 @@
+# Want to find a certain commandlet or all commandlets that has to do with example Export?
+#
+# Run this command in either Powershell Console or Powershell ISE
+#
+# Instructions: Just replace the text   The full or partial name
+# With the whole command or part of the command name that you want
+# to find the name for.
+#
+# Example: Get-Command *Export*
+# Returns a list of all the commands that has Export as part of their name.
+
+Get-Command *The full or partial name*
